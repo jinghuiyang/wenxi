@@ -52,7 +52,7 @@
         <font style="color: gray"> 其他方式登录</font><BR><br>
         <a href=""> <img src="${pageContext.request.contextPath}/imge/qq.png" class="rounded-circle"
                          style="width: 40px;height: 35px;"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href=""> <img src="${pageContext.request.contextPath}/imge/weibo.png" class="rounded-circle"
+        <a href="https://api.weibo.com/oauth2/authorize?client_id=258427282&response_type=code&redirect_uri=http://127.0.0.1:8080/login/weiboLogin"> <img src="${pageContext.request.contextPath}/imge/weibo.png" class="rounded-circle"
                          style="width: 40px;height: 35px;"></a> &nbsp;&nbsp;&nbsp;&nbsp;
 
         <a href=""> <img src="${pageContext.request.contextPath}/imge/zhifubao.png" class="rounded-circle"
