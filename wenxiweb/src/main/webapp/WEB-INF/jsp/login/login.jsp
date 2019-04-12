@@ -67,6 +67,13 @@
 </div>
 
 <script>
+    var user='${sessionScope.user}'
+        if(user==null){
+            window.setTimeout(function () {
+                 alert("登陆失败")
+            },1000)
+        }
+
     $("#login").click(function () {
         var login = $("form").serialize()
         $.ajax({

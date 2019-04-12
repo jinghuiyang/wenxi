@@ -1,4 +1,6 @@
-<%@ page import="com.youzhong.entity.Student" %><%--
+<%@ page import="com.youzhong.entity.Student" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--
   Created by IntelliJ IDEA.
   User: 联想辉哥
   Date: 2019/4/11
@@ -67,11 +69,20 @@
                     class="the_divi_line">|</span></div>
 
             <%-- 注册和登陆--%>
-            <div>
-                <a href="${pageContext.request.contextPath}/index/register"><small>注册</small></a>
-                <a href="${pageContext.request.contextPath}/index/login"><small>登陆</small></a>
+            <c:if test="${sessionScope.user==null}">
+                <div>
+                    <a href="${pageContext.request.contextPath}/index/register"><small>注册</small></a>
+                    <a href="${pageContext.request.contextPath}/index/login"><small>登陆</small></a>
 
-            </div>
+                </div>
+            </c:if>
+
+            <c:if test="${sessionScope.user!=null}">
+                <div>
+                    登录成功
+                </div>
+            </c:if>
+
 
             <div class="nav_more_entry"><a href="javascript:;" class="ent_view_way mpver">手机版
                 <div class="qr_code_pop"><i class="sm_direct_icon"></i>

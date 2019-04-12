@@ -9,11 +9,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import weibo4j.Users;
 import weibo4j.model.User;
-import weibo4j.model.WeiboException;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,7 +27,7 @@ public class LoginController {
     private UserService userService;
 
     @RequestMapping("weiboLogin")
-    public void weiboLogin(String code, Model model, HttpSession session, HttpServletResponse response) {
+    public void weiboLogin(String code, Model model, HttpServletRequest request, HttpSession session, HttpServletResponse response) {
         //微博apl上的放送的地址
         String url = "https://api.weibo.com/oauth2/access_token";
         Map map = new HashMap();
@@ -52,19 +51,16 @@ public class LoginController {
             //数据库比对是否有这个用户,根据uid去查找用户
             System.out.println(user.toString());
             com.youzhong.entity.User login = userService.selectuid(user.getId());
-            if (login != null) {
+            if (login != null) {//如果有重定向到主页面
                 session.setAttribute("user", login);
                 response.sendRedirect("/index.jsp");
 
-            } else {
-                model.addAttribute("user", user);
-                response.sendRedirect("login/register");
+            } else {//没有请求转发到注册页面
+                session.setAttribute("wenbo",user);
+                request.getRequestDispatcher("/index/register").forward(request,response);
             }
-        } catch (WeiboException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-
         }
 
 
