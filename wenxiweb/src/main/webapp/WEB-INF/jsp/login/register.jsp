@@ -40,7 +40,10 @@
                        placeholder="密码"><span id="pasp"></span>
             </div>
         </div>
-
+      <input type="hidden" name="socialUid" value="${user.id}">
+      <input type="hidden" name="headurl" value="${user.url}">
+      <input type="hidden" name="sex" value="${user.gender}">
+      <input type="hidden" name="address" value="${user.location}">
 
     </form>
 

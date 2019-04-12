@@ -1,32 +1,73 @@
 package com.youzhong.controller;
 
+import com.youzhong.service.UserService;
 import com.youzhong.util.HttpUtil;
 import net.sf.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import weibo4j.Users;
+import weibo4j.model.User;
+import weibo4j.model.WeiboException;
 
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 抓取第三方登陆的信息
+ */
 @Controller
 @RequestMapping("login")
 public class LoginController {
 
+    @Autowired
+    private UserService userService;
+
     @RequestMapping("weiboLogin")
-    public String weiboLogin(String code){
+    public void weiboLogin(String code, Model model, HttpSession session, HttpServletResponse response) {
         //微博apl上的放送的地址
-     String url="https://api.weibo.com/oauth2/access_token" ;
-        Map map=  new HashMap();
+        String url = "https://api.weibo.com/oauth2/access_token";
+        Map map = new HashMap();
         //要封装的数据
-     map.put("client_id","258427282");
-     map.put("client_secret","599f156ca462200fb10dd987bb01702e");
-     map.put("grant_type","authorization_code");
-     map.put("code",code);
-     map.put("redirect_uri","http://127.0.0.1:8080/login/weiboLogin");
+        map.put("client_id", "258427282");
+        map.put("client_secret", "599f156ca462200fb10dd987bb01702e");
+        map.put("grant_type", "authorization_code");
+        map.put("code", code);
+        map.put("redirect_uri", "http://127.0.0.1:8080/login/weiboLogin");
         String json = HttpUtil.post(url, map);
         JSONObject jsonObject = JSONObject.fromObject(json);//将json转换成对象
+        //网站的token
+        String access_token = jsonObject.get("access_token").toString();
 
-        return "";
+        String uid = jsonObject.get("uid").toString();//得到uid
+
+        Users um = new Users(access_token);
+        try {
+            //提供的工具找到对应的对象
+            User user = um.showUserById(uid);
+            //数据库比对是否有这个用户,根据uid去查找用户
+            System.out.println(user.toString());
+            com.youzhong.entity.User login = userService.selectuid(user.getId());
+            if (login != null) {
+                session.setAttribute("user", login);
+                response.sendRedirect("/index.jsp");
+
+            } else {
+                model.addAttribute("user", user);
+                response.sendRedirect("login/register");
+            }
+        } catch (WeiboException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+
+
     }
 
 }
