@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User selectuid(String id) {
         UserExample userExample = new UserExample();
-        //判断
+        //判断是否存在这个对象
         userExample.createCriteria().andSocialUidEqualTo(id);
         List<User> userList = userMapper.selectByExample(userExample);
         if (userList != null && userList.size() > 0) {
