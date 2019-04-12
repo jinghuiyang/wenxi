@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
+/**
+ * 测试环境是否正常
+ */
 @Controller
 @RequestMapping("student")
 public class StudentController {
