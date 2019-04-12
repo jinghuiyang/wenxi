@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="wenxi@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.7">
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="day1109"/>
+    <schema id="3" parent="1" name="day1116"/>
+    <schema id="4" parent="1" name="day1117"/>
+    <schema id="5" parent="1" name="day1119"/>
+    <schema id="6" parent="1" name="day1120"/>
+    <schema id="7" parent="1" name="day1120-pm"/>
+    <schema id="8" parent="1" name="day1121"/>
+    <schema id="9" parent="1" name="day1124"/>
+    <schema id="10" parent="1" name="day1126"/>
+    <schema id="11" parent="1" name="day1129"/>
+    <schema id="12" parent="1" name="day1130"/>
+    <schema id="13" parent="1" name="day1201"/>
+    <schema id="14" parent="1" name="day1203"/>
+    <schema id="15" parent="1" name="day1204"/>
+    <schema id="16" parent="1" name="day1205"/>
+    <schema id="17" parent="1" name="day1206"/>
+    <schema id="18" parent="1" name="day1207"/>
+    <schema id="19" parent="1" name="day1208"/>
+    <schema id="20" parent="1" name="day1210"/>
+    <schema id="21" parent="1" name="day1215"/>
+    <schema id="22" parent="1" name="day1220"/>
+    <schema id="23" parent="1" name="day1221"/>
+    <schema id="24" parent="1" name="day1222"/>
+    <schema id="25" parent="1" name="day1225"/>
+    <schema id="26" parent="1" name="day1226"/>
+    <schema id="27" parent="1" name="day1227"/>
+    <schema id="28" parent="1" name="day1229"/>
+    <schema id="29" parent="1" name="day1230"/>
+    <schema id="30" parent="1" name="day2019-0103"/>
+    <schema id="31" parent="1" name="day2019-0105"/>
+    <schema id="32" parent="1" name="day2019-0108"/>
+    <schema id="33" parent="1" name="day2019_0102"/>
+    <schema id="34" parent="1" name="information_schema"/>
+    <schema id="35" parent="1" name="kaoshi"/>
+    <schema id="36" parent="1" name="mianshi"/>
+    <schema id="37" parent="1" name="mysql"/>
+    <schema id="38" parent="1" name="ssm"/>
+    <schema id="39" parent="1" name="ssm1"/>
+    <schema id="40" parent="1" name="ssm2"/>
+    <schema id="41" parent="1" name="ssm4"/>
+    <schema id="42" parent="1" name="ssm5"/>
+    <schema id="43" parent="1" name="test"/>
+    <schema id="44" parent="1" name="web1"/>
+    <schema id="45" parent="1" name="wenxi">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="46" parent="45" name="t_student"/>
+    <column id="47" parent="46" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="48" parent="46" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <key id="49" parent="46" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

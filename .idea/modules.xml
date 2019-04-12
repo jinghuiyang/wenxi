@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/wenxi/wenxi.iml" filepath="$PROJECT_DIR$/wenxi/wenxi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wenxicore/wenxicore.iml" filepath="$PROJECT_DIR$/wenxicore/wenxicore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wenxidao/wenxidao.iml" filepath="$PROJECT_DIR$/wenxidao/wenxidao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wenxiservice/wenxiservice.iml" filepath="$PROJECT_DIR$/wenxiservice/wenxiservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wenxiweb/wenxiweb.iml" filepath="$PROJECT_DIR$/wenxiweb/wenxiweb.iml" />
+    </modules>
+  </component>
+</project>
