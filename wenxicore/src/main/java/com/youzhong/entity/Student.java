@@ -2,8 +2,18 @@ package com.youzhong.entity;
 
 public class Student {
     private Integer id;
+    private String sex;
+
 
     private String name;
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
 
     public Integer getId() {
         return id;
