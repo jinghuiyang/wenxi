@@ -37,9 +37,11 @@ public class LoginController {
         map.put("grant_type", "authorization_code");
         map.put("code", code);
         map.put("redirect_uri", "http://127.0.0.1:8080/login/weiboLogin");
+        //工具类将数据带回
         String json = HttpUtil.post(url, map);
+        //将数据解析成对象
         JSONObject jsonObject = JSONObject.fromObject(json);//将json转换成对象
-        //网站的token
+        //可以通过对象将数据获取到，网站的token
         String access_token = jsonObject.get("access_token").toString();
 
         String uid = jsonObject.get("uid").toString();//得到uid
