@@ -28,8 +28,8 @@
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.25" />
           <element id="library" level="project" name="Maven: org.mongodb:mongo-java-driver:3.4.3" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.11.1.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-mongodb:1.8.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.1.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-mongodb:2.1.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.1.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons-core:1.4.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz:2.3.0" />
           <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.2" />
