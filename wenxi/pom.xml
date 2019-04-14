@@ -21,7 +21,7 @@
         <!-- spring 的版本 -->
         <spring.version>
             <!-- 3.2.0.RELEASE -->
-            4.3.7.RELEASE
+            4.3.18.RELEASE
         </spring.version>
         <activemq_version>5.7.0</activemq_version>
 
