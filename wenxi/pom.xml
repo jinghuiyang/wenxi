@@ -65,8 +65,6 @@
             <version>${spring.redis.version}</version>
         </dependency>
 
-
-
         <!-- mongodb java driver -->
         <dependency>
             <groupId>org.mongodb</groupId>
@@ -89,6 +87,8 @@
             <artifactId>spring-data-commons-core</artifactId>
             <version>1.4.1.RELEASE</version>
         </dependency>
+
+
 
 
 
