@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.youzhong.dao.AppMapper" >
+  <resultMap id="BaseResultMap" type="com.youzhong.entity.App" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="version" property="version" jdbcType="VARCHAR" />
+    <result column="appsize" property="appsize" jdbcType="VARCHAR" />
+    <result column="developer" property="developer" jdbcType="VARCHAR" />
+    <result column="apptype" property="apptype" jdbcType="VARCHAR" />
+    <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="apkurl" property="apkurl" jdbcType="VARCHAR" />
+    <result column="iconurl" property="iconurl" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <insert id="saveApps" parameterType="map">
+
+
+      INSERT INTO t_app
+      (id,name, version, appsize, developer, apptype,updatedate,content)
+      VALUES
+      <foreach collection="list" item="item" index="index" separator=",">
+        (
+        #{item.id},
+        #{item.name},
+        #{item.version},
+        #{item.appsize},
+        #{item.developer},
+        #{item.apptype},
+        #{item.updatedate},
+        #{item.content}
+        )
+      </foreach>
+
+  </insert>
+  
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, name, version, appsize, developer, apptype, updatedate, content, apkurl, iconurl
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.youzhong.entity.AppExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from t_app
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_app
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_app
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.youzhong.entity.AppExample" >
+    delete from t_app
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.youzhong.entity.App" useGeneratedKeys="true" keyProperty="id">
+    insert into t_app (id, name, version, 
+      appsize, developer, apptype, 
+      updatedate, content, apkurl, 
+      iconurl)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{version,jdbcType=VARCHAR}, 
+      #{appsize,jdbcType=VARCHAR}, #{developer,jdbcType=VARCHAR}, #{apptype,jdbcType=VARCHAR},
+      #{updatedate,jdbcType=TIMESTAMP}, #{content,jdbcType=VARCHAR}, #{apkurl,jdbcType=VARCHAR}, 
+      #{iconurl,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.youzhong.entity.App" >
+    insert into t_app
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="appsize != null" >
+        appsize,
+      </if>
+      <if test="developer != null" >
+        developer,
+      </if>
+      <if test="apptype != null" >
+        apptype,
+      </if>
+      <if test="updatedate != null" >
+        updatedate,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+      <if test="apkurl != null" >
+        apkurl,
+      </if>
+      <if test="iconurl != null" >
+        iconurl,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="appsize != null" >
+        #{appsize,jdbcType=DOUBLE},
+      </if>
+      <if test="developer != null" >
+        #{developer,jdbcType=VARCHAR},
+      </if>
+      <if test="apptype != null" >
+        #{apptype,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedate != null" >
+        #{updatedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="apkurl != null" >
+        #{apkurl,jdbcType=VARCHAR},
+      </if>
+      <if test="iconurl != null" >
+        #{iconurl,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.youzhong.entity.AppExample" resultType="java.lang.Integer" >
+    select count(*) from t_app
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_app
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=VARCHAR},
+      </if>
+      <if test="record.appsize != null" >
+        appsize = #{record.appsize,jdbcType=DOUBLE},
+      </if>
+      <if test="record.developer != null" >
+        developer = #{record.developer,jdbcType=VARCHAR},
+      </if>
+      <if test="record.apptype != null" >
+        apptype = #{record.apptype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updatedate != null" >
+        updatedate = #{record.updatedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.content != null" >
+        content = #{record.content,jdbcType=VARCHAR},
+      </if>
+      <if test="record.apkurl != null" >
+        apkurl = #{record.apkurl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.iconurl != null" >
+        iconurl = #{record.iconurl,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_app
+    set id = #{record.id,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
+      version = #{record.version,jdbcType=VARCHAR},
+      appsize = #{record.appsize,jdbcType=DOUBLE},
+      developer = #{record.developer,jdbcType=VARCHAR},
+      apptype = #{record.apptype,jdbcType=VARCHAR},
+      updatedate = #{record.updatedate,jdbcType=TIMESTAMP},
+      content = #{record.content,jdbcType=VARCHAR},
+      apkurl = #{record.apkurl,jdbcType=VARCHAR},
+      iconurl = #{record.iconurl,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.youzhong.entity.App" >
+    update t_app
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="appsize != null" >
+        appsize = #{appsize,jdbcType=DOUBLE},
+      </if>
+      <if test="developer != null" >
+        developer = #{developer,jdbcType=VARCHAR},
+      </if>
+      <if test="apptype != null" >
+        apptype = #{apptype,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedate != null" >
+        updatedate = #{updatedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="apkurl != null" >
+        apkurl = #{apkurl,jdbcType=VARCHAR},
+      </if>
+      <if test="iconurl != null" >
+        iconurl = #{iconurl,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.youzhong.entity.App" >
+    update t_app
+    set name = #{name,jdbcType=VARCHAR},
+      version = #{version,jdbcType=VARCHAR},
+      appsize = #{appsize,jdbcType=DOUBLE},
+      developer = #{developer,jdbcType=VARCHAR},
+      apptype = #{apptype,jdbcType=VARCHAR},
+      updatedate = #{updatedate,jdbcType=TIMESTAMP},
+      content = #{content,jdbcType=VARCHAR},
+      apkurl = #{apkurl,jdbcType=VARCHAR},
+      iconurl = #{iconurl,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
