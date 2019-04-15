@@ -36,6 +36,14 @@
 
     <dependencies>
 
+        <!-- 抓取网路的数据 -->
+        <dependency>
+            <groupId>org.htmlparser</groupId>
+            <artifactId>htmlparser</artifactId>
+            <version>1.6</version>
+        </dependency>
+
+
         <!-- 第三方登陆 -->
         <dependency>
             <groupId>commons-codec</groupId>
