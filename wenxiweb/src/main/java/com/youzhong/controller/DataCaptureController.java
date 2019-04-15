@@ -66,41 +66,41 @@ public class DataCaptureController {
                     for (int j = 0; j < children.size(); j++) {
                         if (j == 2) {
                             NodeList childrens = children.elementAt(j).getChildren();
-                             if(childrens.size()>0){
-                                 //得到第三层
-                                 String text1 = childrens.elementAt(1).getFirstChild().getText();//得到版本号
-                                 app.setVersion(text1);
+                            if (childrens.size() > 0) {
+                                //得到第三层
+                                String text1 = childrens.elementAt(1).getFirstChild().getText();//得到版本号
+                                app.setVersion(text1);
 
-                             }
+                            }
 
                         }
                         if (j == 3) {
 
                             NodeList childrens = children.elementAt(j).getChildren();
-                             if(childrens.size()>0){
-                                 //得到开发者信息(里面有一个超链接)
-                                 NodeList text1 = childrens.elementAt(1).getChildren();
-                                 //得到超链接的文本
-                                 String developer = text1.elementAt(0).getFirstChild().getText();
-                                 app.setDeveloper(developer);
+                            if (childrens.size() > 0) {
+                                //得到开发者信息(里面有一个超链接)
+                                NodeList text1 = childrens.elementAt(1).getChildren();
+                                //得到超链接的文本
+                                String developer = text1.elementAt(0).getFirstChild().getText();
+                                app.setDeveloper(developer);
 
-                             }
+                            }
 
                         }
                         if (j == 4) {
                             NodeList childrens = children.elementAt(j).getChildren();
-                              if(childrens.size()>0){
-                                  //得到第三层
-                                  //得到更新时间
-                                  String updateTime = childrens.elementAt(1).getFirstChild().getText();
-                                  try {
-                                      app.setUpdatedate(sdf.parse(updateTime));
-                                  } catch (ParseException e) {
-                                      e.printStackTrace();
-                                  }
+                            if (childrens.size() > 0) {
+                                //得到第三层
+                                //得到更新时间
+                                String updateTime = childrens.elementAt(1).getFirstChild().getText();
+                                try {
+                                    app.setUpdatedate(sdf.parse(updateTime));
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
 
 
-                              }
+                            }
 
                         }
 
@@ -116,7 +116,6 @@ public class DataCaptureController {
             String text1 = appSizeList.elementAt(0).getLastChild().getText();
             app.setAppsize(text1.substring(text1.indexOf("趣") + 4));
             //得到下载大小
-
 
 
             parser.reset();
@@ -188,7 +187,7 @@ public class DataCaptureController {
 
             for (int i = 0; i < threadNum; i++) {
                 //开始多线程抓取数据
-                DownThread downThread = new DownThread((i * threadTotalPage) + 1, (i + 1) * threadTotalPage > totalPage ? totalPage : (0 + 1) * threadTotalPage, appService,appImgService);
+                DownThread downThread = new DownThread((i * threadTotalPage) + 1, (i + 1) * threadTotalPage > totalPage ? totalPage : (0 + 1) * threadTotalPage, appService, appImgService);
                 //启动线程
                 downThread.start();
             }
