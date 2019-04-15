@@ -25,11 +25,11 @@ public class DownThread extends Thread {
     private AppService appService;
     private AppImgService appImgService;
 
-    public DownThread(Integer startNum, Integer endNum, AppService appService,AppImgService appImgService) {
+    public DownThread(Integer startNum, Integer endNum, AppService appService, AppImgService appImgService) {
         this.startNum = startNum;
         this.endNum = endNum;
-        this.appService=appService;
-        this.appImgService=appImgService;
+        this.appService = appService;
+        this.appImgService = appImgService;
     }
 
     public AppService getAppService() {
@@ -72,9 +72,9 @@ public class DownThread extends Thread {
                     TagNode tagNode = (TagNode) parse.elementAt(j);
                     String href = tagNode.getAttribute("href");
 
-                    App app =new  DataCaptureController().data("http://mm.10086.cn" + href);
+                    App app = new DataCaptureController().data("http://mm.10086.cn" + href);
                     app.setId(new Random().nextInt(1000000000));
-                     appService.insert(app);
+                    appService.insert(app);
                     Parser parser1 = new Parser("http://mm.10086.cn" + href);
 
                     HasAttributeFilter imgeFilter = new HasAttributeFilter("class", "true_pie_pic");
@@ -85,7 +85,7 @@ public class DownThread extends Thread {
 
                     //给图片表中加数据
                     AppImg appImg = new AppImg();
-                      appImg.setAppid(app.getId());
+                    appImg.setAppid(app.getId());
                     for (int h = 0; h < imgeList.size(); h++) {
 
                         TagNode tagNode1 = (TagNode) imgeList.elementAt(h).getChildren().elementAt(0);
