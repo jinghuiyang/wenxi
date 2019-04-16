@@ -58,8 +58,8 @@ public class LoginController {
                 response.sendRedirect("/index.jsp");
 
             } else {//没有请求转发到注册页面
-                session.setAttribute("wenbo",user);
-                request.getRequestDispatcher("/index/register").forward(request,response);
+                session.setAttribute("wenbo", user);
+                request.getRequestDispatcher("/index/register").forward(request, response);
             }
         } catch (Exception e) {
             e.printStackTrace();
