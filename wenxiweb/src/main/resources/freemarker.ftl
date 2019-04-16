@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>微信-中国移动应用商场</title>
+    <link href="http://img.mmarket.com/mm2.11/css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="http://img.mmarket.com/mm2.11/css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="http://img.mmarket.com/?t=css&20170911.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="http://img.mmarket.com/css/web.css"/>
+    <script type="text/javascript" src="http://img.mmarket.com/mm2.11/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="http://img.mmarket.com/mm2.11/js/index.js"></script>
+    <script type="text/javascript">var _udata = _udata || [], _WEB_STATIC_URL = 'http://img.mmarket.com',
+            _WEBDOMAIN = 'mm.10086.cn', _PREFIXDOMAIN = 'mmf_',
+            _WEB_PUBLIC_CODE = 'F56E4DA7226E4651065BBC3A0FD72B3EA40EFAFEA5D737B406270779077ECA93ADA5B4A3B228AFEB5A9FF16F2CB14698A5BFA609734069123F6752AC751205734131774EF599FF4BDCB470831C4EA6DBBA188491F88A71E751FE91B0157E16CC85F28682AF6E7510E4BB01AC21275860FD842CB69E36396AD782BFB2AB8E5BD7',
+            _CK_U = "MM_U", _MM_USERID = 0, _DATATYPE_ = "android",
+            _VERIFYURL = 'http://mm.10086.cn/verifyimagecode/getimage?clientid=101';</script>
+    <!--[if IE 6]>
+    <script src="http://img.mmarket.com/js/PNG.js" type="text/javascript"></script>
+    <script type="text/javascript">        'undefined' != typeof(EvPNG) && EvPNG.fix('div,i,a,li,span,input,s,body,img');  //EvPNG.fix('包含透明PNG图片的标签'); 多个标签之间用英文逗号隔开。
+    </script><![endif]--><!--[if lte IE 8]>
+    <script type="text/javascript">window.onerror = function () {
+        return true;
+    }</script><![endif]--></head>
+<body>
+<div id="the_ahead_wrap">
+    <div class="com_headed_dot">
+        <div class="adv_nav_access">
+            <div class="nav_access_clmp"><a target="_blank" href="http://www.10086.cn/" class="zgyd"></a><a
+                    target="_blank" href="http://mm.10086.cn/" class="market"></a>
+                <div class="the_route_way"><a target="_blank" href="/" class="son_itemize">首页
+                    <i></i></a><a target="_blank" href="/store" class="son_itemize on">应用商店
+                    <i></i></a><a target="_blank" href="http://dev.10086.cn/" class="son_itemize">开发者社区
+                    <i></i></a></div>
+                <div class="ferret_frame">
+                    <div class="putin_key"><input type="text" placeholder="请输入关键字" value="" name="" id="key_search">
+                    </div>
+                    <a href="javascript:;" class="ferrrt_smicon"></a></div>
+            </div>
+        </div>
+        <div class="market_nav_bar">
+            <div class="sortize_area_fix"><a href="http://mm.10086.cn/store" class="calic ">首页<i></i></a><span
+                    class="the_divi_line">|</span><a href="http://mm.10086.cn/android/game/ranking?pay=1"
+                                                     class="calic ">游戏<i></i></a><span class="the_divi_line">|</span><a
+                    href="http://mm.10086.cn/android/software/ranking?pay=1" class="calic ">软件<i></i></a><span
+                    class="the_divi_line">|</span><a href="/android/topic/installneed"
+                                                     class="calic ">装机必备<i></i></a><span
+                    class="the_divi_line">|</span><a href="/activity" class="calic ">活动<i></i></a><span
+                    class="the_divi_line">|</span><a href="/android/topic" class="calic ">专题<i></i></a><span
+                    class="the_divi_line">|</span><a target="_blank" href="/mmbpc/index.do"
+                                                     class="calic">创业计划<i></i></a><span class="the_divi_line">|</span><a
+                    href="/android/topic/zyyw" class="calic ">小和玛的应用<i></i></a><span class="the_divi_line">|</span>
+            </div>
+            <div class="nav_more_entry"><a href="javascript:;" class="ent_view_way mpver">手机版
+                <div class="qr_code_pop"><i class="sm_direct_icon"></i>
+                    <div class="sider_show_title">扫一扫，下载到手机</div>
+                    <img class="related_scancode" src="http://img.mmarket.com/mm2.1/index/images/221x220x1.png"
+                         width="158" height="158">
+                    <div class="advance_txt">MM一下，轻松享乐！</div>
+                </div>
+            </a><!-- <a href="javascript:;" class="ent_view_way pcver">PC版</a> --><a target="_blank"
+                                                                                     href="https://white.anva.org.cn/"
+                                                                                     class="ent_view_way bmdver">白名单</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<script>    $(".ferrrt_smicon").bind("click", function () {
+    var keyword = $("#key_search").val()
+    console.log(keyword)
+    if (keyword) {
+        window.open("http://mm.10086.cn/searchapp?st=0&q=" + keyword);
+    }
+})
+</script>
+<input type="hidden" data-did="95854" data-cid="300002470355" id="appurl"/>
+<div class="app_detail_set">
+    <div class="detail_set_rounded">
+        <div class="set_rounded_topform"><a href="javascript:;" class="ro_mf_logo"><img
+                src="http://img.mmarket.com/mm2.11/images/92_outline.png" class="mf_logo_outline" width="92"
+                height="92"><img
+                src="http://u5.fr18.mmarket.com:80/rs/res2/21/2019/01/30/a484/022/52022484/logo5_src.jpg"
+                class="mf_logo_icon" width="92" height="92"></a>
+            <div class="ro_mf_info">
+                <div class="mf_info_front"><span class="info_front_name ovhelipse">${app.name}</span>
+                    <!--<span class="info_front_extra no_viruses">无病毒</span><span class="info_front_extra no_adve">无广告</span>--><span
+                            class="info_front_extra vari_item">免费</span></div>
+                <div class="mf_info_follow">
+                    <div class="star_rank" id="star_rank"><span class="star_clip star_outline-s"><span
+                            class="star_clip star_inline-s" style="width:80%"></span></span></div>
+                    <span class="get_ori_mark">4分</span><a class="get_ori_comment">（34212条评论）</a></div>
+                <div class="mf_info_about"><span class="get_user_know"><span style="color:#ff5a00;">644万+</span>感兴趣 · ${app.appsize}</span><span>分类:</span><a
+                        href="javascript:;" class="tool_bel_clap">${app.apptype}</a></div>
+            </div>
+            <a href="http://mm.10086.cn/download/android/300002470355?from=www" class="ins_down_install"><span
+                    class="down_install_txt">加入购物车</span></a>
+            <div class="broad_side_code"><img
+                    src="http://img.mmarket.com/android/3000024/24/300002470/300002470355/8de67b2118ffe16e15e1c6a10f7430ef.png"
+                    width="70" height="70">
+                <div class="broad_side_tip">二维码扫描下载</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="set_rounded_mainbl">
+            <div class="rounded_mainbl_left">
+                <div class="mainbl_yy_cuts">应用截图</div>
+                <div class="mainbl_reveal_area">
+                    <div class="reveal_train">
+                        <div class="trans_innertu">
+                            <div class="true_pie">
+                                <div class="true_pie_pic"><img
+                                        src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2019/01/30/a488/022/52022488/picture1_480x800.jpg"
+                                        width="210" height="374"></div>
+                                <div class="true_pie_pic"><img
+                                        src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2019/01/30/a492/022/52022492/picture2_480x800.jpg"
+                                        width="210" height="374"></div>
+                                <div class="true_pie_pic"><img
+                                        src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2019/01/30/a496/022/52022496/picture3_480x800.jpg"
+                                        width="210" height="374"></div>
+                                <div class="true_pie_pic"><img
+                                        src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2019/01/30/a500/022/52022500/picture4_480x800.jpg"
+                                        width="210" height="374"></div>
+                            </div>
+                        </div>
+                        <a href="javascript:;" class="the_arrow left_ons"></a><a href="javascript:;"
+                                                                                 class="the_arrow right_ons"></a></div>
+                    <div class="mainbl_cm_batten">应用介绍</div>
+                    <div class="the_flesh_out"><p class="flow_res_msg">
+                        ${app.content}</p>
+                    </div>
+                    <div class="cont_hold"><a href="javascript:;" class="control_cnt"><span
+                            class="cnt_word_txt">展开</span></a></div>
+                    <div class="cmt_clot_title"> 应用评论
+                    </div>
+                    <div class="cmt_clot_outwrap">
+
+                        <div id="p_d" data-page="1" data-perpage="10" data-total="34212"
+                             class="mj_page"></div>
+                        <div class="reback_info_send">
+                            <div class="ip_wj_wrapper"><a
+                                    href="http://58.62.173.137/impeach.php?appid=2&sign=4e5947245cd2c404a306908f10c447de"
+                                    class="ip_wang_jing" id="ip_wang_jing"></a></div>
+                            <!--<div class="key_add_jub"><a class="mj_yjjb" href="javascript:void(0);" id="a_jb"></a></div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded_mainbl_right">
+                <div class="mainbl_cm_batten">应用信息</div>
+                <div class="appl_tor_msg">
+                    <div class="tor_msg_ealine">
+                        <div class="mj_fl font-f-yh tips11221">
+                            <div class="tor_msg_range">分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;享：</div>
+                        </div>
+                        <div class="mj_fl font-f-yh tips11221"><span class="weibo_s otshare"
+                                                                     data-des="微信：这是我最新下载的应用，你用过么？一起来下载吧，这个应用真心很给力！详情请猛击："
+                                                                     data-pic="http://u5.mm-img.mmarket.com:80/rs/res2/21/2019/01/30/a488/022/52022488/picture1_480x800.jpg"
+                                                                     data-cid="300002470355"><a href="javascript:;"
+                                                                                                data-type="weixin"
+                                                                                                class="weixin"
+                                                                                                title="分享到微信"
+                                                                                                style="position: relative;"><div
+                                class="share140905 share140905_t"><p class="share140905_pt"><img
+                                src="http://img.mmarket.com/android/3000024/24/300002470/300002470355/741f12fd27015772dc30b2ff091ef87e.png"
+                                width="120" height="120"></p><p class="share140905_pb">使用“扫一扫”,<br>即可将网页分享至朋友圈</p></div></a><a
+                                href="javascript:;" data-type="qzone" data-key="0" class="qzone" target="_blank"
+                                title="分享到QQ空间"></a><a href="javascript:;" data-type="sina" data-key="1136674381"
+                                                       class="sina" target="_blank" title="分享到新浪微博"></a></span></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="tor_msg_ealine">
+                        <div class="tor_msg_range">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</div>
+                        <div class="tor_msg_muni">免费</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="tor_msg_ealine">
+                        <div class="tor_msg_range">版&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本：</div>
+                        <div class="tor_msg_muni">${app.version}</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="tor_msg_ealine">
+                        <div class="tor_msg_range">提&nbsp;供&nbsp;者&nbsp;：</div>
+                        <div class="tor_msg_muni"><a
+                                href="/android/dev/%E6%B7%B1%E5%9C%B3%E5%B8%82%E8%85%BE%E8%AE%AF%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+                                target="_blank"
+                                title="深圳市腾讯计算机系统有限公司">${app.developer}</a></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="tor_msg_ealine">
+                        <div class="tor_msg_range">更新时间：</div>
+                        <div class="tor_msg_muni">${(app.updatedate?string("yyyy-MM-dd"))!} </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="tor_msg_ealine">
+                        <div class="tor_msg_range">系统支持：</div>
+                        <div class="tor_msg_muni">Android 2.2及以下 及以上</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="inst_guess_bl rel_recmd_sot">
+                    <div class="mainbl_cm_batten">相关推荐</div>
+                    <div class="guess_bl_inner ">
+                        <div class="bl_inner_row"><a target="_blank"
+                                                     href="/android/info/300000712016.html?from=www&fw=2000010000"
+                                                     class="bl_inster_tu"><img
+                                src="http://img.mmarket.com/mm2.11/images/70_outline.png" width="70" height="70"
+                                class="inster_cover"><img
+                                src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2016/08/08/a908/784/48784908/logo140x1400641337071_src.jpg"
+                                width="70" height="70"
+                                class="inster_real"></a>
+                            <div class="bl_inster_tell"><a class="inster_tell_nm ovhelipse">QQ</a>
+                                <p class="inster_tell_hobby ovhelipse">&lt;<span style="color:#ff5a00;">511万+</span>感兴趣
+                                </p>
+                                <p class="inster_tell_tm ovhelipse">更新时间：2019-03-13</p></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="bl_inner_row"><a target="_blank"
+                                                     href="/android/info/300008769659.html?from=www&fw=2000010000"
+                                                     class="bl_inster_tu"><img
+                                src="http://img.mmarket.com/mm2.11/images/70_outline.png" width="70" height="70"
+                                class="inster_cover"><img
+                                src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2016/08/12/a992/809/48809992/logo140x1401003654891_src.jpg"
+                                width="70" height="70"
+                                class="inster_real"></a>
+                            <div class="bl_inster_tell"><a class="inster_tell_nm ovhelipse">WiFi万能钥匙</a>
+                                <p class="inster_tell_hobby ovhelipse">&lt;<span style="color:#ff5a00;">249万+</span>感兴趣
+                                </p>
+                                <p class="inster_tell_tm ovhelipse">更新时间：2019-04-11</p></div>
+                            <div class="clear"></div>
+                        </div>
+
+
+                        <div class="bl_inner_row"><a target="_blank"
+                                                     href="/android/info/300001135021.html?from=www&fw=2000010000"
+                                                     class="bl_inster_tu"><img
+                                src="http://img.mmarket.com/mm2.11/images/70_outline.png" width="70" height="70"
+                                class="inster_cover"><img
+                                src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2016/07/23/a051/704/48704051/logo5_src.jpg"
+                                width="70" height="70"
+                                class="inster_real"></a>
+                            <div class="bl_inster_tell"><a class="inster_tell_nm ovhelipse">腾讯手机管家</a>
+                                <p class="inster_tell_hobby ovhelipse">&lt;<span style="color:#ff5a00;">54万+</span>感兴趣
+                                </p>
+                                <p class="inster_tell_tm ovhelipse">更新时间：2019-03-07</p></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="bl_inner_row"><a target="_blank"
+                                                     href="/android/info/300000735450.html?from=www&fw=2000010000"
+                                                     class="bl_inster_tu"><img
+                                src="http://img.mmarket.com/mm2.11/images/70_outline.png" width="70" height="70"
+                                class="inster_cover"><img
+                                src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2016/05/26/a989/350/48350989/logo5_src.jpg"
+                                width="70" height="70"
+                                class="inster_real"></a>
+                            <div class="bl_inster_tell"><a class="inster_tell_nm ovhelipse">QQ浏览器</a>
+                                <p class="inster_tell_hobby ovhelipse">&lt;<span style="color:#ff5a00;">65万+</span>感兴趣
+                                </p>
+                                <p class="inster_tell_tm ovhelipse">更新时间：2019-01-24</p></div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inst_guess_bl rel_like_sot">
+                    <div class="mainbl_cm_batten">猜你喜欢</div>
+                    <div class="guess_bl_inner ">
+                        <div class="bl_inner_row"><a target="_blank"
+                                                     href="/android/info/300001258335.html?from=www&fw=2000020000"
+                                                     class="bl_inster_tu"><img
+                                src="http://img.mmarket.com/mm2.11/images/70_outline.png" width="70" height="70"
+                                class="inster_cover"><img
+                                src="http://ota.mmarket.com:38080/rs/res1/21/2013/07/12/a407/864/25864407/logo4140x1403609864809_src.jpg"
+                                width="70" height="70"
+                                class="inster_real"></a>
+                            <div class="bl_inster_tell"><a class="inster_tell_nm ovhelipse">高德地图（免费语音导航）</a>
+                                <p class="inster_tell_hobby ovhelipse">&lt;<span style="color:#ff5a00;">54万+</span>感兴趣
+                                </p>
+                                <p class="inster_tell_tm ovhelipse">更新时间：2015-07-07</p></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="bl_inner_row"><a target="_blank"
+                                                     href="/android/info/300001096149.html?from=www&fw=2000020000"
+                                                     class="bl_inster_tu"><img
+                                src="http://img.mmarket.com/mm2.11/images/70_outline.png" width="70" height="70"
+                                class="inster_cover"><img
+                                src="http://img.mmarket.com/android/30000/10/300001096149/logo5_src.jpg1.jpg" width="70"
+                                height="70"
+                                class="inster_real"></a>
+                            <div class="bl_inster_tell"><a class="inster_tell_nm ovhelipse">携程旅行</a>
+                                <p class="inster_tell_hobby ovhelipse">&lt;<span style="color:#ff5a00;">20万+</span>感兴趣
+                                </p>
+                                <p class="inster_tell_tm ovhelipse">更新时间：2015-07-20</p></div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div id="com_footer_set"><a href="http://mm.10086.cn/help/copyright" target="_blank"><span>版权声明 |</span></a><a
+        href="http://mm.10086.cn/onlineservice" target="_blank"><span>在线客服 |</span></a><a
+        href="http://www.10086.cn/aboutus/" target="_blank"><span>关于移动 |</span></a><a href="http://mm.10086.cn/help"
+                                                                                      target="_blank"><span>帮助中心 |</span></a><a
+        href="http://www.miibeian.gov.cn/" target="_blank"><span>京ICP备05002571号-5 |</span></a><a
+        href="http://cmic.chinamobile.com/" target="_blank"><span>中移互联网有限公司 |</span></a><a
+        href="http://net.china.com.cn/index.htm" target="_blank"><span>暴恐音视频举报</span></a></div>
+<a href="javascript:;" id="goAhead"></a>
+<script type="text/javascript"
+        src="http://img.mmarket.com/?t=js&f=jPages.js,androidinfo.js,android_ios_info.js,20170912.js"></script>
+<script type="text/javascript">    var _udataProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _udataProtocol +
+        "da.mmarket.com/udata/udata.js%3faid%3d300009974188' type='text/javascript'%3E%3C/script%3E"));
+
+function _geturllastpar(url, index) {
+    if (!url) return false;
+    if (index) {
+        return url.match(/fw=\d+\.(\d+)/)[1] || 0;
+    } else {
+        return url.split('/').pop().split('?').shift();
+    }
+}
+
+$(function () {
+    /*
+    * 导航栏开始
+    * ----------------------------------------------------------------------
+    * */
+    $('.adv_nav_access .nav_access_clmp .zgyd').click(function () {
+        var href = _geturllastpar($(this)[0].href);
+        _udata.push(['sendEvent', 'mobile_' + href, 'index_' + href + '_links']);
+    });
+    $('.adv_nav_access .nav_access_clmp .market').click(function () {
+        var href = _geturllastpar($(this)[0].href);
+        _udata.push(['sendEvent', 'market_' + href, 'index_' + href + '_links']);
+    });
+    $('.adv_nav_access .nav_access_clmp .the_route_way .son_itemize.index').click(function () {
+        _udata.push(['sendEvent', "index", 'index']);
+    });
+    $('.adv_nav_access .nav_access_clmp .the_route_way .son_itemize.store').click(function () {
+        _udata.push(['sendEvent', "market", 'index']);
+    });
+    $('.adv_nav_access .nav_access_clmp .the_route_way .son_itemize.dev').click(function () {
+        _udata.push(['sendEvent', "dev", 'index']);
+    });
+    $('.mobilevs').click(function () {
+        _udata.push(['sendEvent', "web", 'index']);
+    });
+    $('.webvs').click(function () {
+        _udata.push(['sendEvent', "mobile", 'index']);
+    });
+    /*
+    *   导航栏结束-----------------------------------------------------
+    * */
+
+    //轮播图点击
+    $('.the_main_area .banner_list_box a').on('click', function () {
+        var index = $(this).index() + 1;
+        _udata.push(['sendEvent', 'brands_click_' + index, 'brands_' + index + '_links']);
+    });
+    //导航栏：首页、游戏、软件、装机必备、活动、专题、创业计划、小和玛的应用按钮点击量。手机版、pc版、白名单按钮点击量。
+    $('.com_headed_dot .adv_nav_access a').on('click', function () {
+        var className = $(this).attr('class');
+        _udata.push(['sendEvent', className, 'navi']);
+    });
+    //三个专题的点击量
+    $('.leftcontent .tjzt .maintopic a').on('click', function () {
+        var className = $(this).attr('class');
+        _udata.push(['sendEvent', className, 'topic']);
+    });
+    //置顶资源位点击
+    $('.tuijian .tjhe a').on('click', function () {
+        _udata.push(['sendEvent', 'ad', 'top']);
+    });
+    //排行榜点击情况
+    $('.rightside .rank_charts_area .rank_chart_list .rank_icon_step a').on('click', function () {
+        var className = $(this).attr('class');  //链接和下载点击
+        _udata.push(['sendEvent', className, 'topic']);
+    });
+
+    //中国移动和装机必备
+    $('.leftcontent .zq_common_btn .zq_app_display .app_des_icon a').on('click', function () {
+        var className = $(this).attr('class');  //链接和下载点击
+        _udata.push(['sendEvent', className, 'mobile']);
+    });
+    //排行榜
+    $('.com_area_recommend .re_sw_colloction .re_software_push a').on('click', function () {
+        var className = $(this).attr('class');  //链接和下载点击
+        _udata.push(['sendEvent', className, 'subtopic']);
+    });
+});
+</script>
+</body>
+</html>

@@ -5,7 +5,7 @@ public class AppImg {
 
     private String url;
 
-    private Integer appid;
+    private String appid;
 
     public Integer getId() {
         return id;
@@ -23,11 +23,11 @@ public class AppImg {
         this.url = url == null ? null : url.trim();
     }
 
-    public Integer getAppid() {
+    public String getAppid() {
         return appid;
     }
 
-    public void setAppid(Integer appid) {
+    public void setAppid(String appid) {
         this.appid = appid;
     }
 }

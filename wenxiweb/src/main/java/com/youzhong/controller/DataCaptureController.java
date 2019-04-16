@@ -4,6 +4,7 @@ import com.youzhong.config.DownThread;
 import com.youzhong.entity.App;
 import com.youzhong.service.AppImgService;
 import com.youzhong.service.AppService;
+import com.youzhong.util.FreemarkerUtil;
 import org.htmlparser.Parser;
 import org.htmlparser.filters.AndFilter;
 import org.htmlparser.filters.HasAttributeFilter;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.HashMap;
 
 /**
  * 抓取网站的数据
@@ -29,6 +31,8 @@ public class DataCaptureController {
     private AppService appService;
     @Autowired
     private AppImgService appImgService;
+
+    private FreemarkerUtil freemarkerUtil=new FreemarkerUtil();
 
     //抓取每个应用的数据
     public App data(String appUrl) {
@@ -158,6 +162,12 @@ public class DataCaptureController {
 
                appImgService.save(appImg);
             }*/
+
+            //开始生成静态页面
+            HashMap<String, Object> map = new HashMap<>();
+            map.put("app",app);
+            //调用工具类
+            freemarkerUtil.fprint("freemarker.ftl",map,"D:/html/"+app.getName()+".html");
             return app;
 
         } catch (ParserException e) {

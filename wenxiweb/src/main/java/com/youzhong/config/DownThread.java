@@ -16,7 +16,7 @@ import org.htmlparser.util.ParserException;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
+import java.util.UUID;
 
 public class DownThread extends Thread {
 
@@ -73,7 +73,9 @@ public class DownThread extends Thread {
                     String href = tagNode.getAttribute("href");
 
                     App app = new DataCaptureController().data("http://mm.10086.cn" + href);
-                    app.setId(new Random().nextInt(1000000000));
+
+
+                    app.setId(UUID.randomUUID().toString());
                     appService.insert(app);
                     Parser parser1 = new Parser("http://mm.10086.cn" + href);
 

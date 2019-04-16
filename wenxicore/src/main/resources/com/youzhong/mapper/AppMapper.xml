@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.youzhong.dao.AppMapper" >
   <resultMap id="BaseResultMap" type="com.youzhong.entity.App" >
-    <id column="id" property="id" jdbcType="INTEGER" />
+    <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="version" property="version" jdbcType="VARCHAR" />
     <result column="appsize" property="appsize" jdbcType="VARCHAR" />
@@ -132,7 +132,7 @@
       appsize, developer, apptype, 
       updatedate, content, apkurl, 
       iconurl)
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{version,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{version,jdbcType=VARCHAR},
       #{appsize,jdbcType=VARCHAR}, #{developer,jdbcType=VARCHAR}, #{apptype,jdbcType=VARCHAR},
       #{updatedate,jdbcType=TIMESTAMP}, #{content,jdbcType=VARCHAR}, #{apkurl,jdbcType=VARCHAR}, 
       #{iconurl,jdbcType=VARCHAR})
