@@ -168,13 +168,17 @@ public class DataCaptureController {
 
     @RequestMapping("down")
     public void downDate() {
+        //拿到整个网站的地址
         String appUrl = "http://mm.10086.cn/android/software/qbrj";
+        //定义总页数的过滤器
         HasAttributeFilter attributeFilter = new HasAttributeFilter("class", "last");
         try {
             Parser parser = new Parser(appUrl);
             NodeList parse = parser.parse(attributeFilter);
             TagNode tagNode = (TagNode) parse.elementAt(0);
+            //根据节点选择器可以操作属性
             String[] hrefs = tagNode.getAttribute("href").split("=");
+            //根据字符串切割拿到总页数
             String href = hrefs[hrefs.length - 1];
             //得到的总页数
             Integer totalPage = Integer.parseInt(href);
