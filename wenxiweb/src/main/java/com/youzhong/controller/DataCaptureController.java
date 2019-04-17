@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
+import java.util.UUID;
 
 /**
  * 抓取网站的数据
@@ -162,7 +163,7 @@ public class DataCaptureController {
 
                appImgService.save(appImg);
             }*/
-
+            app.setId(UUID.randomUUID().toString());
             //开始生成静态页面
             HashMap<String, Object> map = new HashMap<>();
             map.put("app",app);

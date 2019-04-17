@@ -83,6 +83,21 @@
                 </div>
             </c:if>
 
+            <div>
+                <a href="${pageContext.request.contextPath}/html/QQ.html">qq</a>
+                <a href="${pageContext.request.contextPath}/html/必备应用.html">必备应用</a>
+                <a href="${pageContext.request.contextPath}/html/抖音短视频.html">抖音短视频</a>
+                <a href="${pageContext.request.contextPath}/html/爱奇艺.html">爱奇艺</a>
+                <a href="${pageContext.request.contextPath}/html/百度.html">百度</a>
+                <a href="${pageContext.request.contextPath}/test.html">测试</a>
+                <a href="${pageContext.request.contextPath}/goods/mes">订单详情</a>
+            </div>
+            <script>
+                $("#mybutton").click(function () {
+                    alert("ss")
+                })
+            </script>
+
 
             <div class="nav_more_entry"><a href="javascript:;" class="ent_view_way mpver">手机版
                 <div class="qr_code_pop"><i class="sm_direct_icon"></i>
@@ -108,6 +123,10 @@
     }
 })
 </script>
+
+
+
+
 <div class="yystore">
     <div class="the_main_area">
         <div class="banner_list_box"><!--轮播图--><a href="http://mm.10086.cn/android/topic/zyyw?fw=1607" target="_blank">

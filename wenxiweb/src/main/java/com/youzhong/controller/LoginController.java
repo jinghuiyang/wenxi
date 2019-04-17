@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import weibo4j.Users;
 import weibo4j.model.User;
 
@@ -66,6 +67,19 @@ public class LoginController {
         }
 
 
+    }
+
+    @RequestMapping("userLogin")
+    @ResponseBody
+    public com.youzhong.entity.User userLogin(HttpSession session){
+        com.youzhong.entity.User user = (com.youzhong.entity.User) session.getAttribute("user");
+        if(user!=null){//判断session是否空
+            return user;
+        }else {//不存在
+            com.youzhong.entity.User user1 = new com.youzhong.entity.User();
+            user1.setId(1);
+            return user1;
+        }
     }
 
 }

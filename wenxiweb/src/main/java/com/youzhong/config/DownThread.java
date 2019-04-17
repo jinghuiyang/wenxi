@@ -75,7 +75,7 @@ public class DownThread extends Thread {
                     App app = new DataCaptureController().data("http://mm.10086.cn" + href);
 
 
-                    app.setId(UUID.randomUUID().toString());
+
                     appService.insert(app);
                     Parser parser1 = new Parser("http://mm.10086.cn" + href);
 
