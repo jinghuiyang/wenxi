@@ -8,7 +8,10 @@ public interface GoodsService {
     String getgoodsId(Integer id, String goodsId);
 
     void insert(Integer id, String goodsId, Integer goods1);
+
     Set<Goods> allValue(Integer id);
 
     void insertMySQL(Goods goods1);
+
+    void delete(Integer id);
 }

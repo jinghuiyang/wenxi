@@ -1,6 +1,7 @@
 package com.youzhong.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * 封装商品，进入redis数据库
@@ -10,7 +11,7 @@ public class Goods implements Serializable{
    private Integer zhuId;//表中数据id
    private Integer uid;
     private Integer num;//商品数量
-    private Integer price;//商品价格
+    private BigDecimal price;//商品价格
 
     public Integer getZhuId() {
         return zhuId;
@@ -53,11 +54,11 @@ public class Goods implements Serializable{
         this.num = num;
     }
 
-    public Integer getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 }
