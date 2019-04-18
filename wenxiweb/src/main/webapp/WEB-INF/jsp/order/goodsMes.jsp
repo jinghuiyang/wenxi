@@ -37,7 +37,7 @@
     </table>
     总价:${num*33} <BUTTON id="submit">生成订单</BUTTON>
 </c:if>
-<c:if test="${sessionScope==null}">
+<c:if test="${sessionScope.user==null}">
      <a href="/index/login">请登录</a>
 </c:if>
 
