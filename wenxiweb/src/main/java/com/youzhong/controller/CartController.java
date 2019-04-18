@@ -52,7 +52,7 @@ public class CartController {
                 if (goods.getId().equals(name)) {
                     flag = true;
                     num = cookies[i].getValue();
-                   break;
+                    break;
                 }
 
             }
