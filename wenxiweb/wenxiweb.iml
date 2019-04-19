@@ -33,6 +33,7 @@
     <orderEntry type="module" module-name="wenxiservice" />
     <orderEntry type="module" module-name="wenxidao" />
     <orderEntry type="module" module-name="wenxicore" />
+    <orderEntry type="library" name="Maven: com.alipay.sdk:alipay-sdk-java:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.20" level="project" />
     <orderEntry type="library" name="Maven: org.htmlparser:htmlparser:1.6" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.10" level="project" />

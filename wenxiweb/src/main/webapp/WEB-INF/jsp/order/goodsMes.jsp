@@ -35,19 +35,27 @@
         </c:forEach>
 
     </table>
-    总价:${num*33} <BUTTON id="submit">生成订单</BUTTON>
+    总价:${sessionScope.num*33} <BUTTON id="submit">生成订单</BUTTON>
+    <button hidden="hidden" id="pay">结算金额</button>
 </c:if>
 <c:if test="${sessionScope.user==null}">
      <a href="/index/login">请登录</a>
 </c:if>
 
 <script>
+    //结算金额
+    $("#pay").click(function () {
+        location.href="${pageContext.request.contextPath}/moneyShow"
+    })
+
+    //生成订单
     $("#submit").click(function () {
            $.ajax({
                url:"${pageContext.request.contextPath}/goods/submit",
                success:function (data) {
                   if(data=="ok"){
                       alert("订单生成")
+                      $("#pay").show()
                   }
                }
            })

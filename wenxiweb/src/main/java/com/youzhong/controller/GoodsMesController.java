@@ -45,7 +45,7 @@ public class GoodsMesController {
             }
             //数据库存储的这个用户的所有信息
             model.addAttribute("gmes", objects);
-            model.addAttribute("num", num);
+            session.setAttribute("num",num);
         }
 
         return "order/goodsMes";
@@ -55,12 +55,13 @@ public class GoodsMesController {
     @ResponseBody
     public String submit(HttpSession session) {
         User user = (User) session.getAttribute("user");
+       int num= (Integer) session.getAttribute("num");
         if (user != null) {
             //一个用户只生成一个订单，但是购买的商品写进商品订单表中
             Order order = new Order();
             order.setCreatetime(new Date());//订单生成时间
             order.setUid(user.getId());//谁下的订单
-            order.setTotalprice(new BigDecimal(33));//订单金额
+            order.setTotalprice(new BigDecimal(num*33));//订单金额
             order.setStatus("0");
             orderService.insert(order);//将用户下的订单加入数据库中（订单只有一个）
 
