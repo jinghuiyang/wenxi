@@ -64,7 +64,7 @@ public class GoodsServiceImpl implements GoodsService {
     @Override
     public void delete(Integer id) {
         Set<Object> keys = redisTemplate.opsForHash().keys(id+"");
-        for(Object o:keys){//需要将radis数据清空,这个方法需要是不定参数列表
+        for(Object o:keys){//需要将radis数据清空,这个方法参数是不定参数列表
             //循环的话也不需要考虑有几个，redis数据库操作比较快
             redisTemplate.opsForHash().delete(id+"",o.toString());
         }
