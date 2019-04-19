@@ -31,7 +31,7 @@ public class GoodsServiceImpl implements GoodsService {
     @Override
     public void insert(Integer id, String goodsId, Integer goods1) {
         //先删除key
-       // redisTemplate.opsForHash().delete(id+"",goodsId+"");
+        // redisTemplate.opsForHash().delete(id+"",goodsId+"");
         /* redisTemplate.opsForHash().put(id+"",goodsId,goods1+"");*/
         HashMap<Object, Object> map = new HashMap<>();
         Goods goods = new Goods();
@@ -48,8 +48,8 @@ public class GoodsServiceImpl implements GoodsService {
         HashSet<Goods> set = new HashSet<>();
         //这个是根据对象的key去找每个商品
         if (keys.size() > 0) {
-            for(Object key:keys){
-                Goods  goods = (Goods) redisTemplate.opsForHash().get(id + "", key.toString());
+            for (Object key : keys) {
+                Goods goods = (Goods) redisTemplate.opsForHash().get(id + "", key.toString());
                 set.add(goods);
             }
         }
@@ -63,10 +63,10 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Override
     public void delete(Integer id) {
-        Set<Object> keys = redisTemplate.opsForHash().keys(id+"");
-        for(Object o:keys){//需要将radis数据清空,这个方法参数是不定参数列表
+        Set<Object> keys = redisTemplate.opsForHash().keys(id + "");
+        for (Object o : keys) {//需要将radis数据清空,这个方法参数是不定参数列表
             //循环的话也不需要考虑有几个，redis数据库操作比较快
-            redisTemplate.opsForHash().delete(id+"",o.toString());
+            redisTemplate.opsForHash().delete(id + "", o.toString());
         }
 
     }
