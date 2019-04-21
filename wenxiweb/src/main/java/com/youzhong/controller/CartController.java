@@ -43,7 +43,7 @@ public class CartController {
     public String insertGoods(HttpSession session, HttpServletRequest request, Goods goods) {//登陆直接添加
         User user = (User) session.getAttribute("user");
         Cookie[] cookies = request.getCookies();
-        boolean flag = false;//判断是否有cookie
+        boolean flag = false;//判断是否有coTokie
         String num = "";
         if (cookies != null) {//判断cookie有没有数据
             for (int i = 0; i < cookies.length; i++) {
