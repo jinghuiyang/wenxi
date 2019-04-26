@@ -8,4 +8,6 @@ public interface UserService {
     User selectMes(User user);
 
     User selectuid(String id);
+
+    User buOpenid(Integer uid);
 }

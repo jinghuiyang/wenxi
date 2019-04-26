@@ -54,7 +54,8 @@ public class LoginController {
             //数据库比对是否有这个用户,根据uid去查找用户
             System.out.println(user.toString());
             com.youzhong.entity.User login = userService.selectuid(user.getId());
-            if (login != null) {//如果有重定向到主页面
+               Boolean flag=true;
+            if (login!=null) {//如果有重定向到主页面
                 session.setAttribute("user", login);
                 response.sendRedirect("/index.jsp");
 

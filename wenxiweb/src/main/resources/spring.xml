@@ -119,5 +119,10 @@
 	<!-- redis -->
 	<import resource="classpath:spring-redis.xml"/>
 
+	<!-- webService-->
+    <import resource="classpath:spring_webService.xml"/>
+
+	<!-- ActiveMq-->
+	<import resource="classpath:spring_mq_sender.xml"/>
 
 </beans>

@@ -31,7 +31,7 @@ public class UserController {
         if ("".equals(user.getTel()) || "".equals(user.getPassword())) {
             return 0;
         } else {
-            User login = userService.selectMes(user);
+              User login = userService.selectMes(user);
             if (login != null) {
                 session.setAttribute("user", login);
                 return 1;

@@ -5,7 +5,10 @@ import com.alipay.api.internal.util.AlipaySignature;
 import com.youzhong.config.AlipayConfig;
 import com.youzhong.entity.Order;
 import com.youzhong.entity.User;
+import com.youzhong.mes.Mes;
 import com.youzhong.service.OrderService;
+import com.youzhong.service.UserService;
+import com.youzhong.service.impl.MySender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,6 +37,10 @@ public class PayController {
 
     @Autowired
     private OrderService orderService;
+    @Autowired
+    private MySender mySender;
+    @Autowired
+    private UserService userService;
 
     @RequestMapping("returnUrl")
     public void returnUrl(HttpServletRequest request, HttpServletResponse response) throws AlipayApiException, IOException {
@@ -204,6 +211,15 @@ public class PayController {
             order.setPaytype("支付宝");
             order.setStatus("1");
             orderService.update(order);//修改数据库，完善信息
+            User user = userService.buOpenid(order.getUid());
+            Mes mes = new Mes();
+
+            //将对象消息推送到Activemq上
+            mes.setOpenid(user.getOpenid());
+            mes.setPrice(order.getTotalprice());
+            mes.setSum(order.getOrdernum());
+            //向Activemq推送消息
+            mySender.sendObjectMes("object", mes);
 
             out.println("success");
 

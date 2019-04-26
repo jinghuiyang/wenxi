@@ -21,20 +21,63 @@
         <!-- spring 的版本 -->
         <spring.version>
             <!-- 3.2.0.RELEASE -->
-            4.3.18.RELEASE
+            4.3.0.RELEASE
         </spring.version>
-        <activemq_version>5.7.0</activemq_version>
+
 
         <!-- redis 版本 -->
         <redis.version>2.9.0</redis.version>
         <spring.redis.version>1.8.4.RELEASE</spring.redis.version>
-
-
+        <!-- activeMq-->
+        <activemq_version>5.7.0</activemq_version>
 
     </properties>
 
 
     <dependencies>
+
+        <dependency>
+
+            <groupId>org.apache.activemq</groupId>
+
+            <artifactId>activemq-core</artifactId>
+
+            <version>${activemq_version}</version>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>org.apache.activemq</groupId>
+
+            <artifactId>activemq-pool</artifactId>
+
+            <version>${activemq_version}</version>
+
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-databinding-aegis</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http-jetty</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+
 
 
         <!-- 支付宝SDK -->
@@ -430,7 +473,7 @@
         </dependency>
 
 
-        <dependency>
+       <!-- <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-jaxws</artifactId>
             <version>2.7.3</version>
@@ -449,7 +492,7 @@
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-transports-http-jetty</artifactId>
             <version>2.7.3</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
 
