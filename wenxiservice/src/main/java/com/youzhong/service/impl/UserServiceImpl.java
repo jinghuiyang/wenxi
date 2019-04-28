@@ -48,4 +48,18 @@ public class UserServiceImpl implements UserService {
         }
         return null;
     }
+
+    @Override
+    public String selectUUUID(String uuid) {
+        UserExample userExample = new UserExample();
+        userExample.createCriteria()//
+                .andUuidEqualTo(uuid);
+        List<User> users = userMapper.selectByExample(userExample);
+        if (users.size() > 0 && users != null) {
+             if (users.get(0).getUuid().equals(uuid)){
+                 return "ok";
+             }
+        }
+        return "no";
+    }
 }
